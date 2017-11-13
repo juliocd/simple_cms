@@ -1,0 +1,32 @@
+<h1>Another hello</h1>
+
+<% 1 + 1 %> <!-- Without any output !-->
+
+<% target = "word"%>
+<%= "Hello #{target}" %>
+<br/>
+<%=
+3.times do |n|
+    puts n
+end
+%>
+<br/>
+<% 3.times do |n| %>
+    <%= n %> <br/>
+<%end%>
+
+<br/>
+<!-- Instance variables from controller -->
+<h2>Instance variables</h2>
+<% @array.each do |n| %>
+    <%= n %> <br/>
+<%end%>
+<br />
+<%= link_to('Go to index', {:action => 'index'})%>
+<br/>
+<!-- Parameters -->
+<h2>Parameters</h2>
+ID: <%= @id %><br />
+ID: <%= params[:id] %><br />
+Page: <%= @page %><br />
+Next page: <%= @page.to_i + 1 %><br />

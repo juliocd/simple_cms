@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  #ERB
+  #Embedded Ruby
+  #<% code %> processes and execute sentence
+  #<%= code %> processes and execute sentence and has a output
+
   #get 'example/show'
 
   #get 'example/new'
@@ -19,6 +24,10 @@ Rails.application.routes.draw do
   get ':controller(/:action(/:id))'
 
   match 'exampleshow', :to => 'example#show', :via => :get
+
+  get 'demo/hello'
+  get 'demo/other_hello'
+  get 'demo/lynda'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'book/main_page'
+
   #ERB
   #Embedded Ruby
   #<% code %> processes and execute sentence
